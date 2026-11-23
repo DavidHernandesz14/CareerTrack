@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CareerTrack</h1>
+        <p>Internship Application Tracker</p>
+    </header>
+
+    <main>
+
+        <!-- DASHBOARD STATISTICS -->
+        <section>
+            <h2>Application Overview</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="total-count">0</h3>
+                    <p>Total Applications</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="applied-count">0</h3>
+                    <p>Applied</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="interview-count">0</h3>
+                    <p>Interviews</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="offer-count">0</h3>
+                    <p>Offers</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPLICATION STATUS CHART -->
+        <section>
+            <h2>Application Status Breakdown</h2>
+            <p>See where your internship applications stand.</p>
+
+            <div id="status-chart">
+                <!-- JavaScript generates chart bars here -->
+            </div>
+        </section>
+
+        <!-- ADD NEW APPLICATION -->
+        <section>
+            <h2>Add New Application</h2>
+
+            <form id="application-form">
+                <label for="company">Company</label>
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Enter company name"
+                    required
+                >
+
+                <label for="position">Position</label>
+                <input
+                    type="text"
+                    id="position"
+                    placeholder="Enter internship position"
+                    required
+                >
+
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="Saved">Saved</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Offer">Offer</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <label for="date_applied">Date Applied</label>
+                <input type="date" id="date_applied">
+
+                <label for="notes">Notes</label>
+                <textarea
+                    id="notes"
+                    rows="3"
+                    placeholder="Additional notes"
+                ></textarea>
+
+                <button type="submit">Add Application</button>
+            </form>
+        </section>
+
+        <!-- MY APPLICATIONS -->
+        <section>
+            <h2>My Applications</h2>
+            <p>Track and manage your internship applications.</p>
+
+            <div class="filter-grid">
+                <div>
+                    <label for="search-input">Search</label>
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search company or position..."
+                    >
+                </div>
+
+                <div>
+                    <label for="status-filter">Filter by Status</label>
+                    <select id="status-filter">
+                        <option value="All">All Statuses</option>
+                        <option value="Saved">Saved</option>
+                        <option value="Applied">Applied</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Offer">Offer</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sort-select">Sort By</label>
+                    <select id="sort-select">
+                        <option value="newest">Newest Added</option>
+                        <option value="oldest">Oldest Added</option>
+                        <option value="company-asc">Company A–Z</option>
+                        <option value="company-desc">Company Z–A</option>
+                        <option value="status">Status</option>
+                        <option value="date-newest">Date Applied (Newest)</option>
+                        <option value="date-oldest">Date Applied (Oldest)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="applications-container">
+                <!-- JavaScript displays applications here -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

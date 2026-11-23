@@ -1,0 +1,267 @@
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #172b4d;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+/* LAYOUT */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #172b4d;
+}
+
+/* STATISTICS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background-color: #f8fafc;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #2563eb;
+    margin: 0;
+}
+
+.stat-card p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* STATUS CHART */
+#status-chart {
+    margin-top: 25px;
+}
+
+.chart-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 35px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.chart-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.chart-track {
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    background-color: #2563eb;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.chart-value {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* FORM */
+#application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#application-form label,
+.filter-grid label {
+    font-weight: bold;
+    color: #172b4d;
+}
+
+#application-form input,
+#application-form select,
+#application-form textarea,
+.filter-grid input,
+.filter-grid select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+#application-form input:focus,
+#application-form select:focus,
+#application-form textarea:focus,
+.filter-grid input:focus,
+.filter-grid select:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+#application-form button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#application-form button:hover {
+    background-color: #1d4ed8;
+}
+
+/* SEARCH AND FILTER CONTROLS */
+.filter-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.filter-grid label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* APPLICATION CARDS */
+#applications-container {
+    margin-top: 25px;
+}
+
+.application-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.application-card:last-child {
+    margin-bottom: 0;
+}
+
+.application-card h3 {
+    margin-top: 0;
+    color: #172b4d;
+}
+
+.application-card p {
+    margin: 8px 0;
+}
+
+/* EDIT BUTTON */
+.edit-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin-top: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* DELETE BUTTON */
+.delete-button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    header {
+        padding: 24px 16px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-row {
+        grid-template-columns: 75px 1fr 25px;
+        gap: 8px;
+    }
+}
